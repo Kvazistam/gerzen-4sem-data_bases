@@ -1,12 +1,28 @@
 # left_leaf = 2-(root-1), right_leaf = root*2
+import lab_1.MyExcept as myExcept
 class BinaryTree:
     def __init__(self, value):
         self.value = value
         self.left = None
         self.right = None
 
+BinaryTree.__str__()
+str(BinaryTree)
+n = 0;
+print(f'abc {n}')
+print('abc', n)
+print('abc '+str(n))
 
-def generate_binary_tree(root, height):
+
+def generate_binary_tree(height: int,root: int ):
+    if height > 23:
+        raise MyExcept.TooBigHeight("Height is too big")
+    if height < 0:
+        raise myExcept.HeightLessZero(message="height values invalid")
+    if not isinstance(root, int):
+        raise myExcept.BinaryTreeException(message="root values invalid")
+    if not isinstance(height, int):
+        raise myExcept.BinaryTreeException(message="height values invalid")
     root = BinaryTree(root)
     tree_list = []
     tree = (root.value, tree_list)
@@ -29,7 +45,6 @@ def generate_binary_tree(root, height):
     return tree
 
 
-
 def print_binary_tree(tree, level=0, prefix='Root: '):
     if tree:
         print(' ' * level * 4 + prefix + str(tree[0]))
@@ -40,17 +55,11 @@ def print_binary_tree(tree, level=0, prefix='Root: '):
 def gen_rec_bin_tree(height: int, root: int):
     tree = {str(root): []}
 
-    # в случае отрицательного значения height или получения в качестве арументов значений для height и root не целых чисел,
-    # поднимаем исключение ValueError() с текстом root and/or height values invalid
-    left_func = lambda root: root + 3
-    right_func = lambda root: root * 2
-
-    if height == 0:
+    if height < 1:
         return tree
     else:
-        l_r = left_func(root)
-        r_r = right_func(root)
-        print(l_r, r_r)
+        l_r = 2-(root-1)
+        r_r = root*2
         a = gen_rec_bin_tree(root=l_r, height=height - 1)
         tree[str(root)].append(a)
         b = gen_rec_bin_tree(root=r_r, height=height - 1)

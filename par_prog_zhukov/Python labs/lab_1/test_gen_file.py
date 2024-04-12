@@ -1,11 +1,11 @@
 import unittest
-from binary_tree_class import *
+from lab_1.binary_tree_class import *
 
 class TestBinaryTree(unittest.TestCase):
     def setUp(self):
         self.root =14
         self.height = 5
-        self.binary_tree = generate_binary_tree(self.root,self.height)
+        self.binary_tree = generate_binary_tree( self.height, self.root,)
 
     def test_root_value(self):
         self.assertEqual(self.binary_tree[0], self.root)
@@ -30,6 +30,22 @@ class TestBinaryTree(unittest.TestCase):
             return True
 
         self.assertTrue(is_binary_tree(self.binary_tree))
+
+    def test_input_data(self):
+
+        with self.assertRaises(ValueError):
+            self.binary_tree = generate_binary_tree(-2, self.root, )
+
+# def run_tests():
+#     # Создаем экземпляр TestLoader
+#     test_loader = unittest.TestLoader()
+#     # Загружаем тестовый набор из текущего модуля
+#     test_suite = test_loader.loadTestsFromModule(__name__)
+#     # Создаем экземпляр TextTestRunner
+#     test_runner = unittest.TextTestRunner()
+#     # Запускаем тесты
+#     test_runner.run(test_suite)
+
 
 if __name__ == '__main__':
     unittest.main()
