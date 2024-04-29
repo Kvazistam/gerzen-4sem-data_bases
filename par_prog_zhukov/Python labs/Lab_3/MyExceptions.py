@@ -1,8 +1,8 @@
 class BinaryTreeException(Exception):
     def __init__(self, *args, **kwargs):
         self.msg = kwargs["message"]
-        self.root = kwargs["root"]
-        self.height = kwargs["height"]
+        # self.logger = kwargs["logger"]
+        # self.module = kwargs["module"]
 
     def __str__(self):
         if self.msg:

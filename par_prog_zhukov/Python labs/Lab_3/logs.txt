@@ -1,0 +1,13 @@
+--2024-04-29 14:12:45.272851----Module:generate_binary_tree----msg:bin tree was created----log_level:DEBUG--
+--2024-04-29 14:12:48.702141----Module:generate_binary_tree----msg:bin tree was created----log_level:DEBUG--
+--2024-04-29 14:13:14.918817----Module:generate_binary_tree----msg:height values invalid----log_level:CRITICAL--
+--2024-04-29 18:52:06.291273----module:lab_1.binary_tree_class----msg:height values invalid----log_level:LogLevel.ERROR--
+--2024-04-29 18:52:34.767036----module:lab_1.binary_tree_class----msg:height values invalid----log_level:LogLevel.ERROR--
+--2024-04-29 18:53:42.210374----module:lab_1.binary_tree_class----msg:height values invalid----log_level:LogLevel.ERROR--
+--2024-04-29 18:55:47.943214----module:lab_1.binary_tree_class----msg:height values invalid----log_level:LogLevel.ERROR--
+--2024-04-29 18:56:19.628301----module:lab_1.binary_tree_class----msg:height values invalid----log_level:LogLevel.ERROR--
+--2024-04-29 18:57:19.610682----module:lab_1.binary_tree_class----msg:height values invalid----log_level:LogLevel.ERROR--
+--2024-04-29 18:58:10.814998----module:lab_1.binary_tree_class----msg:height values invalid----log_level:LogLevel.ERROR--
+--2024-04-29 18:58:33.874138----module:lab_1.binary_tree_class----msg:bin tree was created----log_level:LogLevel.INFO--
+--2024-04-29 18:58:58.596403----module:lab_1.binary_tree_class----msg:bin tree was created----log_level:LogLevel.INFO--
+--2024-04-29 18:59:40.383230----module:lab_1.binary_tree_class----msg:bin tree was created----log_level:LogLevel.INFO--

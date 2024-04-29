@@ -1,6 +1,8 @@
 import unittest
 from lab_1.binary_tree_class import *
 
+
+
 class TestBinaryTree(unittest.TestCase):
     def setUp(self):
         self.root =14
@@ -34,7 +36,7 @@ class TestBinaryTree(unittest.TestCase):
     def test_input_data(self):
 
         with self.assertRaises(ValueError):
-            self.binary_tree = generate_binary_tree(-2, self.root, )
+            self.binary_tree = generate_binary_tree(-2, self.root)
 
 # def run_tests():
 #     # Создаем экземпляр TestLoader
@@ -49,3 +51,4 @@ class TestBinaryTree(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
