@@ -14,22 +14,36 @@ section .text
 _start:
 	xor ax,ax
 	xor dx,dx
+	xor bx, bx
 	mov ah,09
+	mov cx,4
 	lea dx, input_message_ax
 	int 21h
+.input_ax:
 	call .input_hex
-	shl di,4
-	mov bx,di
-	call .input_hex
-	add bx, di
+	mov si, cx
+	dec cx
+	shl cx,2
+	shl di,cl 
+	add bx,di
+	mov cx,si
+	dec cx
+	jnz .input_ax
+	mov cx, 4
 	mov ah,09
 	lea dx, input_message_dx
 	int 21h
+	xor dx,dx 
+.input_dx:
 	call .input_hex
-	shl di,4
-	mov dx,di
-	call .input_hex
-	add dx, di
+	mov si, cx
+	dec cx
+	shl cx,2
+	shl di,cl 
+	add dx,di
+	mov cx,si 
+	dec cx
+	jnz .input_dx
 	mov ax, bx
 	call .print_bin
 	ret
@@ -39,7 +53,6 @@ _start:
 	xor bx,bx
 	mov bl,al
 	mov ah,2
-	push bx
 	pop bx
 	pop ax
 	ret
